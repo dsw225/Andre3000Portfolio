@@ -3,7 +3,7 @@
     --header-color: #B2A092;
     --text-dark: #000000;
     --text-light: #ffffff;
-    --pages-width: 800px;
+    --pages-width: calc(90vh);
 }
 
 @font-face {
@@ -38,7 +38,7 @@ body {
     position:absolute;
     bottom:0px;
     height : 85vh;
-    margin-left: -250px;
+    margin-left: calc(-25vh); /* -250px is good otherwise  Add max height/ and min height to stop*/
 }
 
 .first-header{
@@ -46,9 +46,9 @@ body {
     text-transform: uppercase;
     font-family: 'Gotham-Bold', sans-serif;
     color: var(--header-color);
-    padding: 40px;
+    padding: 5vh;
     margin-left: auto;
-    margin-top: -10vh;
+    margin-top: -1vh;
     text-align: right;
     font-size: 2em;
     h1, p{
