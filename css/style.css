@@ -50,14 +50,14 @@ body {
     margin-left: auto;
     margin-top: -1vh;
     text-align: right;
-    font-size: 2em;
+    font-size: 2.1em;
     h1, p{
         margin-block-start: 0em;
         margin-block-end: 0.2em;
     }
     p {
         color: var(--text-dark);
-        font-size: .8em;
+        font-size: .82em;
     }
 }
 
