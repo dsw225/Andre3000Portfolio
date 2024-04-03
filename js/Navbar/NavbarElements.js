@@ -1,4 +1,4 @@
-// components/Navbar/navbarElements.js
+// js/Navbar/navbarElements.js
 
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";

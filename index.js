@@ -1,7 +1,7 @@
 // index.js
 
 import React from "react";
-import createRoot from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import Navbar from 'js/Navbar/index.js';
 
 /***import {
@@ -11,8 +11,9 @@ import Navbar from 'js/Navbar/index.js';
 } from "react-router-dom";
 import Home from "./pages";***/
 
-const domNode = document.getElementById('NavBar');
-const root = createRoot(domNode);
+const root = ReactDOM.createRoot(
+	document.getElementById("root")
+);
 root.render(
 	<React.StrictMode>
 		<Navbar />
