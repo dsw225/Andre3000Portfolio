@@ -16,13 +16,60 @@
     src: url('../fonts/Gotham-Book.otf') format('opentype'); /* https://css-tricks.com/snippets/css/using-font-face-in-css/ */
 }
 
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham-Medium.otf') format('opentype'); /* https://css-tricks.com/snippets/css/using-font-face-in-css/ */
+}
+
 body {
     font-family: 'Gotham-Book', sans-serif;
     background-color: var(--color-theme);
     color: var(--text-light);
     margin: 0px;
     font-size: 1.5vh;
-  }
+}
+
+#nav-center{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+#navbar {
+    overflow: hidden;
+    max-width: calc(var(--pages-width) - 5vh);
+}
+  
+#navbar a {
+    z-index: 2; /* Above image */
+    float: left;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Gotham-Medium', sans-serif;
+    color: var(--text-dark);
+    text-align: center;
+    text-decoration: none;
+    padding: 3vh 2.5vh;
+}
+
+#navbar a:hover {
+    color: var(--header-color);
+}
+
+#navbar-right {
+    float: right;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
 
 .home-page{
     min-height: calc(100vh);
@@ -67,3 +114,6 @@ body {
     align-items: center;
 }
 
+.slider-one{
+    min-height: 100vh;
+}
