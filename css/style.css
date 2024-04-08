@@ -119,6 +119,11 @@ a, a:link, a:visited, a:focus, a:active{
     background-size: cover;
 }
 
+#fade-box{
+    background-color: var(--color-theme);
+    min-height: 100vh;
+}
+
 #text-slider-one{
     max-width: var(--pages-width);
     padding: 5vh;
