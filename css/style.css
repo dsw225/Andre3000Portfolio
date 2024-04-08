@@ -29,16 +29,25 @@ body {
     font-size: 1.5vh;
 }
 
+a, a:link, a:visited, a:focus, a:active{
+    color:white;
+    text-decoration:none;
+  }
+
 #nav-center{
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 2;
+    mix-blend-mode: difference;
 }
 
 #navbar {
     overflow: hidden;
     max-width: calc(var(--pages-width) - 5vh);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
   
 #navbar a {
@@ -47,28 +56,18 @@ body {
     font-size: 1.2em;
     text-transform: uppercase;
     font-family: 'Gotham-Medium', sans-serif;
-    color: var(--text-dark);
     text-align: center;
     text-decoration: none;
     padding: 3vh 2.5vh;
 }
 
 #navbar a:hover {
-    color: var(--header-color);
+    color: #848484;
+    mix-blend-mode:exclusion;
 }
 
 #navbar-right {
     float: right;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.sticky + .content {
-    padding-top: 60px;
 }
 
 .home-page{
@@ -85,7 +84,7 @@ body {
     position:absolute;
     bottom:0px;
     height : 85vh;
-    margin-left: calc(-25vh); /* -250px is good otherwise  Add max height/ and min height to stop*/
+    margin-left: calc(-27vh); /* -250px is good otherwise  Add max height/ and min height to stop*/
 }
 
 .first-header{
@@ -97,7 +96,7 @@ body {
     margin-left: auto;
     margin-top: -1vh;
     text-align: right;
-    font-size: 2.1em;
+    font-size: 2.3em;
     h1, p{
         margin-block-start: 0em;
         margin-block-end: 0.2em;
@@ -116,4 +115,31 @@ body {
 
 .slider-one{
     min-height: 100vh;
+    background-image: url("../images/outkast31.jpg");
+    background-size: cover;
+}
+
+#text-slider-one{
+    max-width: var(--pages-width);
+    padding: 5vh;
+    margin: auto;
+    text-align: right;
+    font-size: 2.2em;
+    h1{
+        padding-top: 12vh;
+    }
+    h1, h2{
+        font-family: 'Gotham-Bold', sans-serif;
+        color: var(--text-light);
+        text-transform: uppercase;
+        margin-block-start: 0em;
+        margin-block-end: -0.1em;
+    }
+    p{
+        font-family: 'Gotham-Book', sans-serif;
+        max-width: 66%;
+        margin-left: auto;
+        font-size: 1.2em;
+        hyphens: auto;
+    }
 }
