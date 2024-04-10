@@ -1,21 +1,12 @@
-// index.js
+function myfunctionFirst() { 
+    // get the element
+	var div1 = document.getElementsByClassName('temp-slider');
 
-import React from "react";
-import ReactDOM from 'react-dom/client';
-import Navbar from 'js/Navbar/index.js';
-
-/***import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-} from "react-router-dom";
-import Home from "./pages";***/
-
-const root = ReactDOM.createRoot(
-	document.getElementById("root")
-);
-root.render(
-	<React.StrictMode>
-		<Navbar />
-	</React.StrictMode>
-);
+	// set an event listener for it
+	div1.addEventListener('click',function(){
+		var div2 =  document.createElement('div');
+		div2.setAttribute("class", "slider-one");
+		this.parentNode.appendChild(div2);
+		this.parentNode.removeChild(this);
+	});
+ } 

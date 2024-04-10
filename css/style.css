@@ -113,18 +113,25 @@ a, a:link, a:visited, a:focus, a:active{
     align-items: center;
 }
 
+.temp-slider{
+    background-color: var(--color-theme);
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.temp-text{
+
+}
+
 .slider-one{
     min-height: 100vh;
     background-image: url("../images/outkast31.jpg");
     background-size: cover;
-}
-
-#fade-box{
     background-color: var(--color-theme);
-    min-height: 100vh;
 }
 
-#text-slider-one{
+.text-slider-one{
+    min-height: 100vh;
     max-width: var(--pages-width);
     padding: 5vh;
     margin: auto;
