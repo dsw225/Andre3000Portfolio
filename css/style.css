@@ -21,6 +21,11 @@
     src: url('../fonts/Gotham-Medium.otf') format('opentype'); /* https://css-tricks.com/snippets/css/using-font-face-in-css/ */
 }
 
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham-Light.otf') format('opentype'); /* https://css-tricks.com/snippets/css/using-font-face-in-css/ */
+}
+
 body {
     font-family: 'Gotham-Book', sans-serif;
     background-color: var(--color-theme);
@@ -81,11 +86,12 @@ a, a:link, a:visited, a:focus, a:active{
 
 #andre-header-photo{
     display: block;
-    position:absolute;
+    position: absolute;
     bottom:0px;
     height : 85vh;
     margin-left: calc(-27vh); /* -250px is good otherwise  Add max height/ and min height to stop*/
 }
+
 
 .first-header{
     z-index: 1; /* Above image */
@@ -119,13 +125,42 @@ a, a:link, a:visited, a:focus, a:active{
     background-size: cover;
 }
 
-.temp-text{
-
+.scroll {
+    height: 100vh;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow: hidden;
+    overflow-y: hidden;
 }
-
 .slider-one{
     min-height: 100vh;
+    white-space: normal;
     background-image: url("../images/outkast31.jpg");
+    background-size: cover;
+    background-color: var(--color-theme);
+}
+
+.slider-two{
+    min-height: 100vh;
+    white-space: normal;
+    background-image: url("../images/meh\ 1.jpg");
+    background-size: cover;
+    background-color: var(--color-theme);
+}
+
+.slider-three{
+    height: 100vh;
+    white-space: normal;
+    background-image: url("../images/stankempty\ 1.jpg");
+    background-size: cover;
+    background-color: var(--color-theme);
+}
+
+.slider-four{
+    height: 100vh;
+    white-space: normal;
+    background-image: url("../images/grass\ 1.jpg");
     background-size: cover;
     background-color: var(--color-theme);
 }
@@ -154,4 +189,212 @@ a, a:link, a:visited, a:focus, a:active{
         font-size: 1.2em;
         hyphens: auto;
     }
+}
+
+.text-slider-two{
+    min-height: 100vh;
+    max-width: var(--pages-width);
+    padding: 5vh;
+    margin: auto;
+    text-align: left;
+    font-size: 2.2em;
+    h1{
+        padding-top: 12vh;
+    }
+    h1, h2{
+        font-family: 'Gotham-Bold', sans-serif;
+        color: var(--text-light);
+        text-transform: uppercase;
+        margin-block-start: 0em;
+        margin-block-end: -0.1em;
+    }
+    p{
+        font-family: 'Gotham-Book', sans-serif;
+        max-width: 85%;
+        font-size: 1em;
+        hyphens: auto;
+    }
+}
+
+.text-slider-three{
+    min-height: 100vh;
+    max-width: var(--pages-width);
+    padding: 5vh;
+    margin: auto;
+    text-align: left;
+    font-size: 2.2em;
+    color:#00FFFF;
+    mix-blend-mode:exclusion;
+    h1{
+        padding-top: 12vh;
+    }
+    h1, h2{
+        font-family: 'Gotham-Bold', sans-serif;
+        text-transform: uppercase;
+        margin-block-start: 0em;
+        margin-block-end: -0.1em;
+    }
+    p{
+        font-family: 'Gotham-Book', sans-serif;
+        max-width: 66%;
+        font-size: 1em;
+        hyphens: auto;
+    }
+}
+.img-container{
+    max-width: var(--pages-width);
+    position:relative;
+    bottom: 105vh;
+    margin: auto;
+    display: flex;
+    align-items: center; /* Align items at the start (top) */
+    position: relative;
+}
+
+#andre-stank{
+    display: block;
+    position:relative;
+    height : 95vh;
+    margin-left: calc(23vh);; /* -250px is good otherwise  Add max height/ and min height to stop*/
+}
+
+.text-slider-four{
+    min-height: 100vh;
+    max-width: var(--pages-width);
+    padding: 5vh;
+    margin: auto;
+    text-align: left;
+    font-size: 2.2em;
+    h1{
+        padding-top: 12vh;
+    }
+    h1, h2{
+        font-family: 'Gotham-Bold', sans-serif;
+        text-transform: uppercase;
+        margin-block-start: 0em;
+        margin-block-end: -0.1em;
+    }
+    p{
+        font-family: 'Gotham-Book', sans-serif;
+        max-width: 50%;
+        font-size: .8em;
+        hyphens: auto;
+    }
+}
+
+
+
+
+
+.two-slider-one{
+    height: 100vh;
+    white-space: normal;
+    background-image: url("../images/meh3\ 1.jpg");
+    background-size: cover;
+    background-color: var(--color-theme);
+}
+
+.two-text-slider-one{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    max-width: var(--pages-width);
+    padding: 5vh;
+    margin: auto;
+    text-align: right;
+    font-size: 2.2em;
+    h1{
+        padding-top: 12vh;
+    }
+    h1, h2{
+        font-family: 'Gotham-Bold', sans-serif;
+        color: var(--text-light);
+        text-transform: uppercase;
+        margin-block-start: 0em;
+        margin-block-end: -0.1em;
+    }
+    p{
+        font-family: 'Gotham-Book', sans-serif;
+        max-width: 55%;
+        margin-left: auto;
+        font-size: 1.2em;
+        hyphens: auto;
+    }
+}
+
+.two-slider-two{
+    height: 100vh;
+    white-space: normal;
+    background-image: url("../images/meh2\ 1.jpg");
+    background-size: cover;
+    background-color: var(--color-theme);
+}
+
+.two-text-slider-two{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    max-width: var(--pages-width);
+    padding: 5vh;
+    margin: auto;
+    text-align: right;
+    font-size: 2.2em;
+    h1{
+        padding-top: 12vh;
+    }
+    h1, h2{
+        font-family: 'Gotham-Bold', sans-serif;
+        color: var(--text-light);
+        text-transform: uppercase;
+        margin-block-start: 0em;
+        margin-block-end: -0.1em;
+    }
+    p{
+        font-family: 'Gotham-Book', sans-serif;
+        max-width: 55%;
+        margin-left: auto;
+        font-size: .8em;
+        hyphens: auto;
+    }
+}
+
+.two-slider-three{
+    height: 100vh;
+    white-space: normal;
+    background-image: url("../images/Acting\ 1.jpg");
+    background-size: cover;
+    background-color: var(--color-theme);
+}
+
+.two-text-slider-three{
+    min-height: 100vh;
+    max-width: var(--pages-width);
+    color: #000000;
+    padding: 5vh;
+    margin: auto;
+    text-align: left;
+    font-size: 2.2em;
+    h1{
+        padding-top: 12vh;
+    }
+    h1, h2{
+        font-family: 'Gotham-Bold', sans-serif;
+        text-transform: uppercase;
+        margin-block-start: 0em;
+        margin-block-end: -0.1em;
+    }
+    p{
+        font-family: 'Gotham-Book', sans-serif;
+        max-width: 75%;
+        font-size: .8em;
+        hyphens: auto;
+    }
+}
+
+.footer{
+    max-width: var(--pages-width);
+    margin: auto;
+    font-size: 2.3em;
+    background-color: var(--color-theme);
+    color: var(--text-dark);
+    font-family: 'Gotham-Light', sans-serif;
+    text-transform: uppercase;
 }
