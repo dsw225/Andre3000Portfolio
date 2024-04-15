@@ -127,43 +127,26 @@ a, a:link, a:visited, a:focus, a:active{
 
 .scroll {
     height: 100vh;
+    width: 100vw;
     white-space: nowrap;
-    position: relative;
     overflow-x: scroll;
-    overflow: hidden;
-    overflow-y: hidden;
-}
-.slider-one{
-    min-height: 100vh;
-    white-space: normal;
-    background-image: url("../images/outkast31.jpg");
-    background-size: cover;
-    background-color: var(--color-theme);
 }
 
-.slider-two{
-    min-height: 100vh;
-    white-space: normal;
-    background-image: url("../images/meh\ 1.jpg");
-    background-size: cover;
-    background-color: var(--color-theme);
-}
-
-.slider-three{
+.sliders{
     height: 100vh;
+    width:100vw;
     white-space: normal;
-    background-image: url("../images/stankempty\ 1.jpg");
     background-size: cover;
-    background-color: var(--color-theme);
+    background-position-y: bottom;
 }
 
-.slider-four{
+.slider-container{
+    width:100vw;
     height: 100vh;
-    white-space: normal;
-    background-image: url("../images/grass\ 1.jpg");
-    background-size: cover;
-    background-color: var(--color-theme);
+    display: inline-block;
+    height:100vh;
 }
+
 
 .text-slider-one{
     min-height: 100vh;
@@ -286,13 +269,6 @@ a, a:link, a:visited, a:focus, a:active{
 
 
 
-.two-slider-one{
-    height: 100vh;
-    white-space: normal;
-    background-image: url("../images/meh3\ 1.jpg");
-    background-size: cover;
-    background-color: var(--color-theme);
-}
 
 .two-text-slider-one{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -321,14 +297,6 @@ a, a:link, a:visited, a:focus, a:active{
     }
 }
 
-.two-slider-two{
-    height: 100vh;
-    white-space: normal;
-    background-image: url("../images/meh2\ 1.jpg");
-    background-size: cover;
-    background-color: var(--color-theme);
-}
-
 .two-text-slider-two{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     min-height: 100vh;
@@ -354,14 +322,6 @@ a, a:link, a:visited, a:focus, a:active{
         font-size: .8em;
         hyphens: auto;
     }
-}
-
-.two-slider-three{
-    height: 100vh;
-    white-space: normal;
-    background-image: url("../images/Acting\ 1.jpg");
-    background-size: cover;
-    background-color: var(--color-theme);
 }
 
 .two-text-slider-three{
