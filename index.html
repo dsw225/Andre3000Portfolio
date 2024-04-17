@@ -53,7 +53,6 @@
                         </div>
                     </div>
                 </div>
-                <!--
                 <div class="slider-container">
                     <div class="sliders" style="background-image: url(../images/stankempty\ 1.jpg);">
                         <div class="text-slider-three">
@@ -61,11 +60,11 @@
                             <h2>(1999-2005)</h2>
                             <p>With the release of "Stankonia" (2000), OutKast achieved mainstream success and critical acclaim. Andre 3000's contributions to hits like "Ms. Jackson" and "B.O.B. (Bombs Over Baghdad)" showcased his versatility and elevated the duo's status in the music industry.</p>
                         </div>
-                        <div class="img-container">
+                        <!--<div class="img-container">
                             <img id="andre-stank" src="images/81rFN+3o2xL 1.png">
-                        </div>
+                        </div> -->
                     </div>
-                </div>-->
+                </div>
                 <div class="slider-container">
                     <div class="sliders" style="background-image: url(../images/grass\ 1.jpg);">
                         <div class="text-slider-four">
@@ -115,7 +114,7 @@
             input.addEventListener("keydown", logKey);
             function logKey(e){
                 const scrollElement = document.getElementById('music');
-                const scrollAmount = 1000; // Adjust this value to change scroll speed
+                const scrollAmount = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);; // Adjust this value to change scroll speed
                 if (e.code === 'ArrowLeft') {
                     scrollElement.scrollLeft -= scrollAmount; // Scroll left
                 } else if (e.code === 'ArrowRight') {
