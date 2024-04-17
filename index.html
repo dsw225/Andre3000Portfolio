@@ -76,52 +76,92 @@
                 </div>
             </div>
 
-            <!-- <div class="scroll2" id="acting"> -->
-                <div class="sliders" style="background-image: url(../images/meh3\ 1.jpg);">
-                    <div class="two-text-slider-one">
-                        <h1>Early Acting Roles</h1>
-                        <h2>(2005-2006)</h2>
-                        <p>In the mid-2000s, Andre 3000 began his foray into acting with roles in films such as "Four Brothers" (2005) and "Be Cool" (2005). These  appearances showcased his versatility as an artist beyond music, earning him praise for his natural on-screen presence and charisma.</p>
+            <div class="scroll" id="acting">
+                <div class="slider-container">
+                    <div class="sliders" style="background-image: url(../images/meh3\ 1.jpg);">
+                        <div class="two-text-slider-one">
+                            <h1>Early Acting Roles</h1>
+                            <h2>(2005-2006)</h2>
+                            <p>In the mid-2000s, Andre 3000 began his foray into acting with roles in films such as "Four Brothers" (2005) and "Be Cool" (2005). These  appearances showcased his versatility as an artist, earning him praise for his on-screen presence and charisma.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="sliders" style="background-image: url(../images/meh2\ 1.jpg); background-position-y: bottom;">
-                    <div class="two-text-slider-two">
-                        <h1>Breakthrough Performance in "Idlewild"</h1>
-                        <h2>(2006)</h2>
-                        <p>Andre 3000's breakthrough role came with "Idlewild" (2006), a musical drama where he starred alongside Big Boi, his OutKast counterpart. Portraying the character of Percival, Andre's performance was lauded for its depth and emotional resonance, solidifying his status as a multi-talented entertainer.</p>
+                <div class="slider-container">
+                    <div class="sliders" style="background-image: url(../images/meh2\ 1.jpg); background-position-y: bottom;">
+                        <div class="two-text-slider-two">
+                            <h1>Breakthrough Performance in "Idlewild"</h1>
+                            <h2>(2006)</h2>
+                            <p>Andre 3000's breakthrough role came with "Idlewild" (2006), a musical drama where he starred alongside Big Boi, his OutKast counterpart. Portraying the character of Percival, Andre's performance was lauded for its depth and emotional resonance, solidifying his status as a multi-talented entertainer.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="sliders" style="background-image: url(../images/Acting\ 1.jpg);">
-                    <div class="two-text-slider-three">
-                        <h1>Continued Acting Career</h1>
-                        <h2>(2007-Present)</h2>
-                        <p>Andre 3000 has continued to explore acting, albeit with fewer roles compared to his music career. He has appeared in films such as "Semi-Pro" (2008) and "Jimi: All Is by My 
-                            Side" (2013), showcasing his range as an actor 
-                            and further establishing himself as a respected 
-                            figure in both the music and film industries.</p>
+                <div class="slider-container">
+                    <div class="sliders" style="background-image: url(../images/Acting\ 1.jpg);">
+                        <div class="two-text-slider-three">
+                            <h1>Continued Acting Career</h1>
+                            <h2>(2007-Present)</h2>
+                            <p>Andre 3000 has continued to explore acting, albeit with fewer roles compared to his music career. He has appeared in films such as "Semi-Pro" (2008) and "Jimi: All Is by My 
+                                Side" (2013), showcasing his range as an actor 
+                                and further establishing himself as a respected 
+                                figure in both the music and film industries.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="scroll" id="eras">
+                <div class="slider-container">
+                    <div class="sliders" >
+                        <div class="two-text-slider-three">
+                            <h1>Early OutKast Style</h1>
+                            <h2>(1990s)</h2>
+                            <p>Andre 3000's 1990s style with OutKast was vibrant and eclectic, blending Southern streetwear with Afrocentric influences, creating a visually striking aesthetic that embraced individuality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-container">
+                    <div class="sliders">
+                        <div class="two-text-slider-three">
+                            <h1>Experimental Evolution</h1>
+                            <h2>(2000s)</h2>
+                            <p>Transitioning into the 2000s, Andre 3000's style became avant-garde and boundary-pushing, mixing retro-futurism with vintage flair and high fashion collaborations, solidifying his status as a fashion icon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-container">
+                    <div class="sliders">
+                        <div class="two-text-slider-three">
+                            <h1>Minimalistic</h1>
+                            <h2>(2010s-Present)</h2>
+                            <p>In the 2010s and beyond, Andre 3000's style has embraced a refined and minimalist approach, featuring clean lines, monochromatic palettes, and timeless silhouettes, while still retaining an essence of his signature flair.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-                <div class="footer">
-                    <h3><span style="font-family: Gotham-Bold;">Dan Warnick </span></br>
-                        DES 070</br>
-                        Spring 2024</h3>
-                </div>
+            <div class="footer">
+                <h3><span style="font-family: Gotham-Bold;">Dan Warnick </span></br>
+                    DES 070</br>
+                    Spring 2024</h3>
+            </div>
         </div>
         <script>
-            const input = document.querySelector("input");
-            input.addEventListener("keydown", logKey);
-            function logKey(e){
-                const scrollElement = document.getElementById('music');
-                const scrollAmount = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);; // Adjust this value to change scroll speed
+            const scrollAmount = window.innerWidth;
+        
+            document.addEventListener("keydown", logKey);
+        
+            function logKey(e) {
+                let scrollElement = document.querySelector('.scroll:in-viewport');
                 if (e.code === 'ArrowLeft') {
-                    scrollElement.scrollLeft -= scrollAmount; // Scroll left
+                    scrollElement.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    e.preventDefault();
                 } else if (e.code === 'ArrowRight') {
-                    scrollElement.scrollLeft += scrollAmount; // Scroll right
+                    scrollElement.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    e.preventDefault();
                 }
             };
-        </script>
+        </script>            
     </body>
 
 </html>
