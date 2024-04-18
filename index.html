@@ -35,6 +35,12 @@
                 </div>
             </div>
             <div class="scroll" id="music">
+                <button onClick="document.getElementById('music').scrollBy({left: -window.innerWidth*1.0, behavior: 'smooth'})" id="backButton">
+                    <h1><</h1>
+                </button>
+                <button onClick="document.getElementById('music').scrollBy({left: window.innerWidth*1.0, behavior: 'smooth'})" id="forwardButton">
+                    <h1>></h1>
+                </button>
                 <div class="slider-container">
                     <div class="sliders" style="background-image: url(images/outkast31.jpg); background-position-y: bottom;">
                         <div class="text-slider-one">
@@ -54,7 +60,7 @@
                     </div>
                 </div>
                 <div class="slider-container">
-                    <div class="sliders" style="background-image: url(images/stankempty\ 1.jpg);">
+                    <div class="sliders" style="background-image: url(images/stanktemp.jpg);">
                         <div class="text-slider-three">
                             <h1>Mainstream Success and Critical Acclaim</h1>
                             <h2>(1999-2005)</h2>
@@ -77,6 +83,12 @@
             </div>
 
             <div class="scroll" id="acting">
+                <button onClick="document.getElementById('acting').scrollBy({left: -window.innerWidth*1.0, behavior: 'smooth'})" id="backButton2">
+                    <h1><</h1>
+                </button>
+                <button onClick="document.getElementById('acting').scrollBy({left: window.innerWidth*1.0, behavior: 'smooth'})" id="forwardButton2">
+                    <h1>></h1>
+                </button>
                 <div class="slider-container">
                     <div class="sliders" style="background-image: url(images/meh3\ 1.jpg);">
                         <div class="two-text-slider-one">
@@ -110,6 +122,12 @@
             </div>
 
             <div class="scroll" id="eras">
+                <button onClick="document.getElementById('eras').scrollBy({left: -window.innerWidth*1.0, behavior: 'smooth'})" id="backButton3">
+                    <h1><</h1>
+                </button>
+                <button onClick="document.getElementById('eras').scrollBy({left: window.innerWidth*1.0, behavior: 'smooth'})" id="forwardButton3">
+                    <h1>></h1>
+                </button>
                 <div class="slider-container">
                     <div class="sliders" style="background-image: url(images/meh4.jpg); background-position-y: bottom;">
                         <div class="two-text-slider-three">
@@ -145,23 +163,7 @@
                     DES 070</br>
                     Spring 2024</h3>
             </div>
-        </div>
-        <script>
-            const scrollAmount = window.innerWidth;
-        
-            document.addEventListener("keydown", logKey);
-        
-            function logKey(e) {
-                let scrollElement = document.querySelector('.scroll:in-viewport');
-                if (e.code === 'ArrowLeft') {
-                    scrollElement.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                    e.preventDefault();
-                } else if (e.code === 'ArrowRight') {
-                    scrollElement.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                    e.preventDefault();
-                }
-            };
-        </script>            
+        </div>      
     </body>
 
 </html>

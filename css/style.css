@@ -75,6 +75,47 @@ a, a:link, a:visited, a:focus, a:active{
     float: right;
 }
 
+#forwardButton,
+#backButton,
+#forwardButton2,
+#backButton2,
+#forwardButton3,
+#backButton3 {
+    color: var(--text-light);
+    mix-blend-mode: difference;
+    display:block;
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 10vh;
+    position: absolute;
+    filter: drop-shadow(3px 3px 3px #00000021);
+    bottom: -50%;
+}
+
+#forwardButton, #forwardButton2, #forwardButton3 {
+    right: 0;
+    margin-right: 5vw; /* Adjust as needed */
+}
+
+#backButton, #backButton2, #backButton3 {
+    left: 0;
+    margin-left: 5vw; /* Adjust as needed */
+}
+
+/* Terrible, but was broken and I got a due date soo... */
+#forwardButton2,
+#backButton2{
+    bottom: -150%;
+}
+
+#forwardButton3,
+#backButton3 {
+    bottom: -250%;
+}
+
+
+
 .home-page{
     min-height: calc(100vh);
     max-width: var(--pages-width);
@@ -151,7 +192,6 @@ a, a:link, a:visited, a:focus, a:active{
     display: inline-block;
     height:100vh;
 }
-
 
 .text-slider-one{
     min-height: 88vh;
